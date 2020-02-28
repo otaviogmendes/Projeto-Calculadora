@@ -1,4 +1,7 @@
+// Variaveis globais
 var result = document.getElementById("result");
+var n1=0, n2=0, operacao=""
+
 
 function onNumberClicked(numberButton){
     
@@ -11,29 +14,85 @@ function onNumberClicked(numberButton){
 }
 
 function onClearClicked(){
-    result.innerHTML = "0";
+    // Limpar variaveis de memoria
+    result.innerHTML = "0";    
+    n1=0;
+    n2=0;
 }
 
 function onEqualsClicked(){
-    //TODO implement this function
+    // Igual
+   
+    n2 = parseInt(result.innerHTML); // atribuição e conversão para numero 
+    if (operacao == "+")
+    {
+     result.innerHTML = n1+n2;
+    }
+    if (operacao == "-")
+    {
+        result.innerHTML = n1-n2;
+    }
+    if (operacao == "*")
+    {
+        result.innerHTML = n1*n2;
+    }
+    if (operacao == "/" )
+    {
+        if (n2>0)
+        {
+            result.innerHTML = n1/n2;
+        }
+        else
+        {
+            result.innerHTML = "Não pode dividir por zero";
+        }
+        
+    }
+   
+    
+
+
+
 }
 
 function onDivideClicked(){
-    //TODO implement this function
+    // Dividir
+    n1 =  result.innerHTML   
+    n1 = parseInt (n1) ; // retirar as aspas do n1 
+    operacao = "/";
+    result.innerHTML="0";
+
+    
 }
 
 
 
 function onAddClicked(){
-    //TODO implement this function
+    //TODO Adição
+    n1 =  result.innerHTML   
+    n1 = parseInt (n1) ; // retirar as aspas do n1 
+    operacao = "+";
+    result.innerHTML="0";
+
+
 }
 
 function onSubtractClicked(){
-    //TODO implement this function
+    //TODO Subtração
+    n1 =  result.innerHTML   
+    n1 = parseInt (n1) ; // retirar as aspas do n1 
+    operacao = "-";
+    result.innerHTML="0";
+
 }
 
 function onMultiplyCliked(){
-    //TODO implement this function
-    asterisco
+    //TODO Multiplicação
+    
+    n1 =  result.innerHTML   
+    n1 = parseInt (n1) ; // retirar as aspas do n1 
+    operacao = "*";
+    result.innerHTML="0";
+
 }
 
